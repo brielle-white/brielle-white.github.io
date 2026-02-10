@@ -1,0 +1,303 @@
+:root{
+  --bg: #ede0d4;
+  --surface: #dcc5b0;
+  --accent: #656d4a;
+  --accent-dark: #414833;
+  --text: #1b1b1b;
+  --muted: #4b4b4b;
+}
+
+body[data-theme="dark"]{
+    /* Pink theme (Coolors palette):
+     #ffe5ec #ffc2d1 #ffb3c6 #ff8fab #fb6f92 */
+  --bg: #fb6f92;
+  --surface: #ff8fab;
+  --accent: #ffb3c6;
+  --accent-dark: #ffc2d1;
+  --text: #1b1b1b;
+  --muted: #1b1b1b;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ede0d4;
+  background: var(--bg);
+  color: var(--text);
+  }
+
+.container{
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 1.5rem 0 2.5rem;
+}
+
+section{
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  padding: 1.25rem 1.25rem;
+  margin: 1rem 0;
+  backdrop-filter: blur(6px);
+}
+
+hr{
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.15);
+  margin: 1.5rem 0;
+}
+
+.theme-btn{
+  border: 1px solid rgba(255,255,255,0.35);
+  background: transparent;
+  color: white;
+  border-radius: 10px;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+}
+
+.theme-btn:hover{
+  background: rgba(255,255,255,0.15);
+}
+/****************   Nav Section **********************/
+nav {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--accent);
+  border-bottom: 4px solid var(--accent-dark);
+  font-family: "Lora", serif;
+}
+
+nav p{
+  margin: 0;
+}
+
+nav a.active{
+  background: rgba(255,255,255,0.25);
+}
+
+/***********************  Footer Section   **************************/
+footer {
+	margin-top: 2rem;
+  padding: 1rem;
+  background: var(--accent);
+  border-top: 4px solid var(--accent-dark);
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+footer a{
+  color: white;
+  font-weight: 600;
+}
+
+/*********** Splash Page ************************/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ede0d4;
+  border:  solid #e7d1bc;
+  border-width: 2rem;
+  border-right-width: 4rem;
+  border-left-width: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto; 
+  font-size: 2.5rem;  /*idk maybe 1.5 rem 1 rem = 16px*/
+  font-weight: 400;
+  font-style: normal;
+  color: #7f5539;
+}
+
+header img {
+  /* border-radius: 50%; makes an oval */
+  border: 5px solid #7f5539;
+}
+
+.address {
+  font-family: "Lora", serif;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.tagline {
+  font-family: "Lora", serif;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/************* Sections ********************/
+hr {
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.15);
+  margin: 1.5rem 0;
+}
+section h2 {
+  font-family: "Spline Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #414833;
+}
+
+section{
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+section:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+section h3 {
+  font-family: "Spline Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: #414833;
+}
+
+section dl {
+  display: grid;
+  gap: 3px;
+	grid-template-columns: 1fr 1fr;
+}
+
+section ul {
+  list-style-type: circle;
+}
+
+a {
+  color: #000001;
+  /* background-color: #FFFFFF; */
+  font-weight: normal;
+  text-decoration: none;
+  transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+section a:hover {
+  background-color: #faedcd;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #82896e;
+  border-radius: 5px;
+  
+}
+
+/**************   Projects   *****************/
+.three-col {
+  display: grid;
+  /* grid-template-columns: auto auto auto; */
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  padding: 3rem;
+}
+
+/* .card{
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1rem;
+  border: 1px solid rgba(0,0,0,0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+.card img{
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid rgba(0,0,0,0.12);
+  margin-bottom: 0.75rem;
+} */
+
+
+.card img { 
+  display: block; 
+  margin: 0 auto; 
+  border-radius: 4px 2px 4px 2px; 
+} 
+.card { 
+  border-radius: 4px; 
+  background-color: var(--surface);
+} 
+.card:hover { 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+}
+
+/* body[data-theme="dark"]{
+  background-color: #141516;
+  color: #f2f2f2;
+}
+
+body[data-theme="dark"] nav,
+body[data-theme="dark"] footer{
+  background-color: #2d3a2d;
+  border-color: #1f2a1f;
+}
+
+body[data-theme="dark"] .card{
+  background-color: #1f2022;
+} */
+
+/**************   Responsiveness   *****************/
+@media (max-width: 680px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      
+    }
+
+    .three-col {
+      grid-template-columns: 1fr;
+    }
+}
+
+/**************   Contact Page   *****************/
+.one-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* margin: 2rem auto; */
+  gap: 1rem;
+}
+
+input {
+  font-family: "Lora", serif;
+  font-style: italic;
+  border-radius: .5rem;
+  border: .16rem solid #656d4a
+}
+
+textarea {
+   border-radius: .5rem;
+   border: .16rem solid #656d4a
+}
+
+@media print{
+  nav, footer, .filter-buttons, button{
+    display: none;
+  }
+
+  body{
+    background: white;
+    color: black;
+  }
+
+  section{
+    box-shadow: none;
+    border: none;
+  }
+}

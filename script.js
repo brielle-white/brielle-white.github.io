@@ -4,7 +4,10 @@ function applyTheme(theme){
   document.body.dataset.theme = theme;
   localStorage.setItem("theme", theme);
   if(btn){
-    btn.textContent = theme === "dark" ? "☀️" : "🌙";
+    btn.textContent = theme === "dark"
+  ? "Dark Mode 🌙"
+  : "Pink Mode ☀️";
+
   }
 }
 
