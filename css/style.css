@@ -170,8 +170,24 @@ section dl {
 	grid-template-columns: 1fr 1fr;
 }
 
-section ul {
-  list-style-type: circle;
+.skills-list {
+  list-style: none;
+  display: flex;
+  padding: 0;              /* removes left indent */
+  margin: 0;
+
+  display: flex;           /* puts items in a row */
+  gap: 12px;               /* space between them */
+  flex-wrap: wrap;         /* wraps on smaller screens */
+  justify-content: space-evenly;
+}
+
+.skills-list li {
+  padding: 8px 16px;
+  background-color: #e8d9c5;  /* match your theme */
+  border-radius: 999px;      /* makes pill shape */
+  font-size: 1rem;
+  
 }
 
 a {
@@ -200,6 +216,7 @@ nav a:hover {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
   padding: 3rem;
+  align-items: stretch;
 }
 
 /* .card{
@@ -224,34 +241,31 @@ nav a:hover {
   margin-bottom: 0.75rem;
 } */
 
+.project-card {
+  text-decoration: none;
+  color: inherit;          /* keeps text normal */
+  display: block;
+  height: 100%;
+}
+
 
 .card img { 
   display: block; 
   margin: 0 auto; 
   border-radius: 4px 2px 4px 2px; 
 } 
-.card { 
-  border-radius: 4px; 
+.project-card .card { 
+  border-radius: 4px;
   background-color: var(--surface);
+  cursor: pointer;
+  transition: 0.2s ease;
+  height: 100%;
+  width: 100%;
+
 } 
-.card:hover { 
+.project-card .card:hover { 
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
 }
-
-/* body[data-theme="dark"]{
-  background-color: #141516;
-  color: #f2f2f2;
-}
-
-body[data-theme="dark"] nav,
-body[data-theme="dark"] footer{
-  background-color: #2d3a2d;
-  border-color: #1f2a1f;
-}
-
-body[data-theme="dark"] .card{
-  background-color: #1f2022;
-} */
 
 /**************   Responsiveness   *****************/
 @media (max-width: 680px) {
